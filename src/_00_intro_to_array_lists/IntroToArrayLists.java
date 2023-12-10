@@ -1,6 +1,6 @@
 package _00_intro_to_array_lists;
 
-import _01_array_list_visualizer.data.ArrayList;
+import java.util.ArrayList;
 
 public class IntroToArrayLists {
 	public static void main(String[] args) {
@@ -13,16 +13,47 @@ public class IntroToArrayLists {
 		ppls.add("Homie");
 		ppls.add("Walter");
 		ppls.add("Jesse");
-		//3. Print all the Strings using a standard for-loop
-		for(int i =0; i < ppls.size();i++ ) {
-			
+		//3. Print all the Strings using a standard for-loop DONE
+		for(int i = 0; i < ppls.size();i++ ) {
+			String thing = ppls.get(i);
+			System.out.println(thing);
 		}
-		//4. Print all the Strings using a for-each loop
 		
-		//5. Print only the even numbered elements in the list.
+		System.out.println("\n");
 		
-		//6. Print all the Strings in reverse order.
+		//4. Print all the Strings using a for-each loop DONE
+		for(String fEach : ppls){
+			System.out.println(fEach);
+		}
 		
-		//7. Print only the Strings that have the letter 'e' in them.
+		System.out.println("\n");
+		
+		//5. Print only the even numbered elements in the list. DONE
+		
+		for(int i = 0; i < ppls.size();i++) {
+			if (i % 2 == 0) {
+				String numero = ppls.get(i);
+				System.out.println(numero);
+			}
+		}
+		
+		System.out.println("\n");
+		//6. Print all the Strings in reverse order. DONE
+		for( int i = ppls.size(); i > 0;i-- ) {
+			String rev = ppls.get(i - 1);
+			System.out.println(rev);
+		}
+		
+		System.out.println("\n");
+		//7. Print only the Strings that have the letter 'e' in them. DONE
+		for(int i = 0; i < ppls.size();i++ ) {
+			String eFinder = ppls.get(i);
+			if(eFinder.contains("e")) {
+				System.out.println(eFinder);
+			}
+		}
 	}
 }
+
+
+// Nothing Else to Work on Here
